@@ -1,6 +1,7 @@
 language: cpp
 compiler: gcc
 dist: trusty
+cache: ccache
 
 os:
   - linux
@@ -44,5 +45,8 @@ before_script:
   - mkdir build
   - cd build
   - cmake -DDEBUG=0 ..
+
+after_script:
+  - ccache -s
 
 script: make
