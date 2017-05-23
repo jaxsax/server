@@ -46,4 +46,7 @@ before_script:
   - cd build
   - cmake -DDEBUG=0 ..
 
+after_script:
+  - ccache -s
+
 script: make
