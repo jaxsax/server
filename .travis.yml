@@ -1,6 +1,10 @@
 language: cpp
 compiler: gcc
 dist: trusty
+cache: ccache
+
+branches:
+  only: [development]
 
 os:
   - linux
