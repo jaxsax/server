@@ -742,6 +742,7 @@ ChatCommand * ChatHandler::getCommandTable()
     {
         { NODE, "filter",         SEC_CONSOLE,        true,  &ChatHandler::HandleServerLogFilterCommand,     "", nullptr },
         { NODE, "level",          SEC_CONSOLE,        true,  &ChatHandler::HandleServerLogLevelCommand,      "", nullptr },
+        { NODE, "level1",         SEC_CONSOLE,         true, &ChatHandler::HandleServerLogLevelCommand,      "", nullptr },
         { MSTR, nullptr,       0,                  false, nullptr,                                           "", nullptr }
     };
 
