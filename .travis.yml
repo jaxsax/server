@@ -4,7 +4,7 @@ dist: trusty
 cache: ccache
 
 branches:
-  only: [development]
+  only: [development, travis-ccache]
 
 os:
   - linux
