@@ -18,13 +18,13 @@ addons:
       - build-essential
       - gcc-6
       - g++-6
-      - cmake
       - libtbb-dev
       - libace-dev
+      - cmake
       - make
 
 before_script:
-  - if [ $TRAVIS_OS_NAME == 'linux' ]; then export CXX=/usr/bin/g++-6; export CC=/usr/bin/g++-6; fi
+  - if [ $TRAVIS_OS_NAME == 'linux' ]; then export CC=/usr/bin/gcc-6; export CXX=/usr/bin/g++-6; fi
   - $CC  --version
   - $CXX --version
   - export TBB_ROOT_DIR=/usr/lib/tbb
