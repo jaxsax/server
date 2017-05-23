@@ -24,7 +24,7 @@ addons:
       - make
 
 before_script:
-  - [ $TRAVIS_OS_NAME == 'linux' ] && export CC=/usr/lib/ccache/gcc-6; export CXX=/usr/lib/ccache/g++-6
+  - if [ $TRAVIS_OS_NAME == 'linux' ]; then export CC=/usr/lib/ccache/gcc-6; export CXX=/usr/lib/ccache/g++-6; fi
   - $CC  --version
   - $CXX --version
   - export TBB_ROOT_DIR=/usr/lib/tbb
